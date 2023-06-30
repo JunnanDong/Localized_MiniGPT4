@@ -1,4 +1,4 @@
-# Localized running for MiniGPT4
+# Localized running for Mini-GPT4
 A specialized implementation of Mini-GPT4 demo within command lines
 
 ##
