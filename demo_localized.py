@@ -85,10 +85,13 @@ if __name__ == '__main__':
     # ========================================
     #             Image Processing
     # ========================================
-
     # Process each image
     image_paths = glob.glob(os.path.join(
         args.img_dir, '*'))  # get all file paths in the directory
+    
+    # ========================================
+    #             User Input
+    # ========================================
     user_message = input("Enter your question here: ")
     logging.info('=======' + user_message + '=======')
 
@@ -99,9 +102,7 @@ if __name__ == '__main__':
         chat_state = CONV_VISION.copy()
         img_list = []
         llm_message = chat.upload_img(img, chat_state, img_list)
-        # ========================================
-        #             User Input
-        # ========================================
+
         chat.ask(user_message, chat_state)
         llm_message = chat.answer(conv=chat_state,
                                   img_list=img_list,
@@ -109,5 +110,5 @@ if __name__ == '__main__':
                                   temperature=1.0,
                                   max_new_tokens=300,
                                   max_length=2000)[0]
-        logging.info('ImageID:', str(os.path.basename(image_path)))
-        logging.info('MiniGPT4 Answer:', llm_message)
+        logging.info('ImageID: ' + str(os.path.basename(image_path).split('.')))
+        logging.info('MiniGPT4 Answer: '+ llm_message)
