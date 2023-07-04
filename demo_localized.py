@@ -98,7 +98,7 @@ if __name__ == '__main__':
     for image_path in image_paths:
         # Load image
         from PIL import Image
-        img = Image.open(image_path)
+        img = Image.open(image_path).convert('RGB')
         chat_state = CONV_VISION.copy()
         img_list = []
         llm_message = chat.upload_img(img, chat_state, img_list)
