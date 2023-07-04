@@ -112,3 +112,4 @@ if __name__ == '__main__':
                                   max_length=2000)[0]
         logging.info('ImageID: ' + str(os.path.basename(image_path).split('.')))
         logging.info('MiniGPT4 Answer: '+ llm_message)
+        logging.info('=================================')
