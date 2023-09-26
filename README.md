@@ -29,6 +29,7 @@ Download the checkpoints(e.g., [7b](https://drive.google.com/file/d/1RY9jV0dyqLX
 ## Final Step!
 Claim your image file directory path and run:<br>
 `conda activate minigpt4`<br>
+`pip install -U bitsandbytes` to upgrade tp 0.38.1 <br>
 `python demo_localized.py --cfg-path eval_configs/minigpt4_eval.yaml  --gpu-id 0 --img-dir {image directory}`<br>
 It automatically reads all images in `img-dir` and input to Mini-GPT4 in turn. 
 ### Question Input
