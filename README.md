@@ -1,8 +1,8 @@
-# Localized running for Mini-GPT4
+# Localized running for MiniGPT-4
 A specialized implementation of Mini-GPT4 demo within command lines instead of Gradio online.
 
-## Installation of [Mini-GPT4](https://minigpt-4.github.io/)
-This section illustrates my personal experience in playing with the fascinating Mini-GPT4 (7b), big thanks to the authors.<br>
+## Installation of [MiniGPT-4](https://minigpt-4.github.io/)
+This section illustrates my personal experience in playing with the fascinating MiniGPT-4 (7b), big thanks to the authors.<br>
 ### Model Fetching with LFS
 `curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`<br>
 `apt-get install git-lfs`<br>
@@ -19,7 +19,7 @@ Use the official FastChat tool to generate the final weights under directory Fas
 `pip3 install -e . `<i>dont't miss the '.'</i> <br>
 `python -m fastchat.model.apply_delta --base {llama-13bOR7b-hf/}  --target {weights/}  --delta {vicuna-13bOR7b-delta-v1.1/}`
 
-## Preparation for Mini-GPT4
+## Preparation for MiniGPT-4
 ### Env
 `git clone https://github.com/Vision-CAIR/MiniGPT-4.git`<br>
 `conda env create -f environment.yml`<br>
@@ -36,7 +36,7 @@ It automatically reads all images in `img-dir` and input to Mini-GPT4 in turn.
 In `demo_localized.py`, the question is originally fixed for labeling on all images. Feel free to move `user_message` inside the for loop.
 
 ## Acknowledgments
-Thanks to the whole community including authors of Llama, Vicuna, Mini-GPT4, and open-source contributors that helped me during the installation.
+Thanks to the whole community including authors of Llama, Vicuna, MiniGPT-4, and open-source contributors that helped me during the installation.
 
 If you find this implementation helpful, please star and raise issues for further improvements together.
 
